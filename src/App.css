@@ -2,29 +2,143 @@
   display: grid;
   place-content: center;
   min-height: 100vh;
+  background-color: var(--Pale-blue);
 }
 
 .content{
   display: flex;
   justify-content: center;
   align-items: flex-start ;
+  max-width:700px;
 }
 
 .results{
   text-align: center;
   background: linear-gradient( hsl(252, 100%, 67%),hsl(241, 81%, 54%));
-  border-radius: 15px;
+  border-radius: 25px;
   flex: 1;
-  padding: 3rem 2rem ;
+  padding: 2.5rem 3rem ;
+  z-index: 2;
+  color: var(--Pale-blue);
 }
+
+
+.res-rate{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.res-comment{
+  color: var(--Light-lavender);
+}
+
+
 
 .circle{
   aspect-ratio:1.5;
-  background-color: hsl(241, 81%, 54%) ;
+  background: linear-gradient(hsla(256, 72%, 46%, 1),hsl(241, 81%, 54%));
   border-radius: 100%;
-}
+  width: 225px;
+  height: 225px;
+  margin: 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  }
+
+
+  .circle .res-num-1{
+    font-size: 5rem;
+    font-weight: 800;
+  }
+  .circle .res-num-2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--Light-lavender);
+  }
 
 .summary{
   flex: 1;
-  border: 2px solid red;
+  padding: 2.5rem 2.5rem ;
+  padding-left: 3.8rem;
+  background: var(--White);
+  z-index: 1;
+  margin-left: -1.3rem;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.1) ;
+
+}
+
+.summary > h2 {
+  color: var(--Dark-gray-blue);
+}
+
+.btn{
+  width: 100%;
+  border: none;
+  border-radius: 45px;
+  padding: 1rem;
+  background: var(--Dark-gray-blue);
+  color: var(--Pale-blue);
+}
+
+
+/* Summary Component */
+.summary-items-box:nth-child(2){
+  margin-top: 2.2rem;
+}
+.summary-items-box:nth-child(5){
+  margin-bottom: 2.2rem;
+}
+
+.icons{
+  display: flex;
+  gap: 1rem;
+}
+
+.summary-items{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1.8rem;
+  color: var(--Dark-gray-blue);
+  font-weight: 700;
+  border-radius: 10px;
+
+}
+
+.number{
+  color: hsla(224, 30%, 27%, 0.5);
+}
+
+
+.Light-red-summary{
+  color: hsl(0, 100%, 67%);
+}
+
+.Orange-yellow-summary{
+  color: hsl(39, 100%, 56%);
+}
+
+.Green-teal-summary{
+  color: hsl(166, 100%, 37%);
+}
+
+.Cobalt-blue-summary{
+  color: hsl(234, 85%, 45%);
+}
+
+
+
+
+@media (max-width: 600px) {
+  .content{
+    flex-direction: column;
+    justify-content: center;
+     align-items: center;
+  }
 }

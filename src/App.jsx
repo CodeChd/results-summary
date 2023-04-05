@@ -11,11 +11,11 @@ function App() {
         <article className='results'>
         <h1>Your Result</h1>
         <div className="circle">
-          <p>76</p>
-          <p>of 100</p>
+          <p className='res-num-1'>76</p>
+          <p className='res-num-2'>of 100</p>
         </div>
-        <p>  Great  </p>
-        <p>  You scored higher than 65% of the people who have taken these tests.</p>
+        <p className='res-rate'>  Great  </p>
+        <p className='res-comment'>  You scored higher than 65% of the people who have taken these tests.</p>
         </article>
 
         <article className='summary'>
@@ -25,7 +25,7 @@ function App() {
             <Summary data={datas}/>
           ))}
 
-          <button>Continue</button>
+          <button className='btn'>Continue</button>
 
 
         </article>
